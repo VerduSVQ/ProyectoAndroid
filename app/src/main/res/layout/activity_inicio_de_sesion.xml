@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="inicioDeSesionVM" type="com.verdusapplication.app.modules.iniciodesesion.data.viewmodel.InicioDeSesionVM"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearColumnrectangleone"
+        style="@style/groupStylegray_900_8c"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollViewScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="847dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="start">
+
+            <LinearLayout
+                android:id="@+id/linearIniciodesesio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageRectangleOne"
+                    imageRes="@{@drawable/img_rectangle1}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_306pxh"
+                    android:gravity="start"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_rectangle1" />
+
+                <TextView
+                    android:id="@+id/txtIniciodesesi"
+                    style="@style/txtInterextrabold28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_35pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{inicioDeSesionVM.inicioDeSesionModel.txtIniciodesesi}"
+                    tools:text="@string/msg_inicio_de_sesi" />
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    style="@style/txtIntersemibold24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_52pxh"
+                    android:layout_marginTop="@dimen/_32pxv"
+                    android:layout_marginEnd="@dimen/_52pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{inicioDeSesionVM.inicioDeSesionModel.txtEmail}"
+                    tools:text="@string/lbl_email" />
+
+                <EditText
+                    android:id="@+id/etEmailOne"
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:background="@drawable/rectangle_bg_bluegray_100_border_gray_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_plantilla_gmail"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={inicioDeSesionVM.inicioDeSesionModel.etEmailOneValue}"
+                    android:textColorHint="@color/black_900"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/txtContrasea"
+                    style="@style/txtIntersemibold24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_56pxh"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:layout_marginEnd="@dimen/_56pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{inicioDeSesionVM.inicioDeSesionModel.txtContrasea}"
+                    tools:text="@string/lbl_contrase_a" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:background="@drawable/rectangle_bg_bluegray_100_border_gray_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_22pxv"
+                    android:singleLine="true"
+                    android:text="@={inicioDeSesionVM.inicioDeSesionModel.etPasswordValue}"
+                    android:textColorHint="@color/black_900"
+                    tools:ignore="Autofill" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnIniciarSesin"
+                    style="@style/btnSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_iniciar_sesi_n"
+                    android:textAllCaps="false"
+                    tools:text="@string/lbl_iniciar_sesi_n" />
+
+                <TextView
+                    android:id="@+id/txtIniciarsesin"
+                    style="@style/txtInterregular16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_21pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{inicioDeSesionVM.inicioDeSesionModel.txtIniciarsesin}"
+                    tools:text="@string/msg_iniciar_sesi_n" />
+
+                <TextView
+                    android:id="@+id/txtNotienescuen"
+                    style="@style/txtInterregular16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_45pxh"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{inicioDeSesionVM.inicioDeSesionModel.txtNotienescuen}"
+                    tools:text="@string/msg_no_tienes_cuen" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

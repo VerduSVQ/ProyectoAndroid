@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "verdu_s_application"

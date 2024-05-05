@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="pantallaDeCargaaVM" type="com.verdusapplication.app.modules.pantalladecargaa.data.viewmodel.PantallaDeCargaaVM"/>
+    </data>
+    <View android:background="@color/gray_500"
+        android:id="@+id/viewPantalladecar"
+        android:layout_height="match_parent" android:layout_width="match_parent"/>
+</layout>
