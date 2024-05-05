@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="inicioDeSesionVM" type="com.verdusapplication.app.modules.iniciodesesion.data.viewmodel.InicioDeSesionVM"/>
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearColumnrectangleone"
         style="@style/groupStylegray_900_8c"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:gravity="center_horizontal">
 
         <ScrollView
             android:id="@+id/scrollViewScrollview"
-            android:layout_width="match_parent"
-            android:layout_height="847dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:fillViewport="true"
-            android:gravity="start">
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:id="@+id/linearIniciodesesio"
@@ -169,5 +172,5 @@
                     tools:text="@string/msg_no_tienes_cuen" />
             </LinearLayout>
         </ScrollView>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
