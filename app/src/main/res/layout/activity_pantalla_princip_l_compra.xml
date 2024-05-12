@@ -5,21 +5,25 @@
         <variable name="pantallaPrincipLCompraVM" type="com.verdusapplication.app.modules.pantallaprinciplcompra.data.viewmodel.PantallaPrincipLCompraVM"/>
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearColumnvendedog"
         style="@style/groupStylegray_900_8c"
         android:layout_width="match_parent"
         android:layout_height="734dp"
         android:layout_marginEnd="@dimen/_3pxh"
         android:layout_marginBottom="@dimen/_49pxv"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:gravity="center_horizontal">
 
         <FrameLayout
             android:id="@+id/frameStackvendedog"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_93pxv"
-            android:gravity="start">
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="start"
+            app:layout_constraintBottom_toTopOf="@+id/linearPantallaprinci"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarToolbar"
@@ -108,13 +112,18 @@
         <LinearLayout
             android:id="@+id/linearPantallaprinci"
             style="@style/groupStylegray_900_8c"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_33pxh"
-            android:layout_marginTop="@dimen/_19pxv"
-            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameStackvendedog">
 
             <LinearLayout
                 android:id="@+id/linearColumnrectangleten"
@@ -225,5 +234,5 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
