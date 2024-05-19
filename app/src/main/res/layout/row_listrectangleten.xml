@@ -3,52 +3,64 @@
     <data>
         <variable name="listrectangletenRowModel" type="com.verdusapplication.app.modules.pantallaprinciplmenu.data.model.ListrectangletenRowModel"/>
     </data>
-    <LinearLayout android:id="@+id/linearRowrectangleten"
-        android:layout_height="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearRowrectangleten"
+        style="@style/groupStylebluegray_100cornerRadius"
         android:layout_width="match_parent"
-        android:orientation="horizontal" style="@style/groupStylebluegray_100cornerRadius">
-        <ImageView android:id="@+id/imageRectangleTen"
-            android:layout_height="@dimen/_123pxh"
-            android:layout_marginBottom="@dimen/_22pxv"
-            android:layout_marginStart="@dimen/_20pxh"
-            android:layout_marginTop="@dimen/_22pxv"
-            android:layout_width="@dimen/_132pxh"
-            android:scaleType="fitXY"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageRectangleTen"
             imageRes="@{@drawable/img_rectangle10}"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle10"/>
-        <LinearLayout android:gravity="start"
-            android:id="@+id/linearColumnlanguage"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_16pxv"
-            android:layout_marginEnd="@dimen/_18pxh"
-            android:layout_marginStart="@dimen/_22pxh"
-            android:layout_marginTop="@dimen/_30pxv"
-            android:layout_weight="0.54" android:layout_width="0dp" android:orientation="vertical">
-            <TextView android:ellipsize="end"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_rectangle10" />
+
+        <LinearLayout
+            android:id="@+id/linearColumnlanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/txtLanguage"
+                style="@style/txtInterextrabold20"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_width="match_parent"
+                android:ellipsize="end"
                 android:singleLine="true"
                 android:text="@{listrectangletenRowModel.txtLanguage}"
-                style="@style/txtInterextrabold20" tools:text="@string/lbl_pastor_belga"/>
-            <TextView android:id="@+id/txtColorcastao"
+                tools:text="@string/lbl_pastor_belga" />
+
+            <TextView
+                android:id="@+id/txtColorcastao"
+                style="@style/txtInterextralight15"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_2pxh"
                 android:layout_marginTop="@dimen/_2pxv"
-                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/_10pxh"
                 android:text="@{listrectangletenRowModel.txtColorcastao}"
-                style="@style/txtInterextralight15" tools:text="@string/msg_color_casta_o2"/>
-            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
-                android:layout_gravity="end"
+                tools:text="@string/msg_color_casta_o2" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                style="@style/txtInterblack20"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:layout_marginStart="@dimen/_10pxh"
                 android:layout_marginTop="@dimen/_12pxv"
-                android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:singleLine="true"
                 android:text="@{listrectangletenRowModel.txtPrice}"
-                style="@style/txtInterblack20" tools:text="@string/lbl_400"/>
+                tools:text="@string/lbl_400" />
         </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
