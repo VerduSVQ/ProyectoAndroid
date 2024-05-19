@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869753293657",
+    "project_id": "ratreadog",
+    "storage_bucket": "ratreadog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869753293657:android:604a627c62a3208f199a48",
+        "android_client_info": {
+          "package_name": "com.verdusapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdGsm_INd7I5P0P5SBm1VUVPGkGIpUgXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
